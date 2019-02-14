@@ -6,12 +6,13 @@ from numpy.random import shuffle
 class Player:
     # This class simulate a player
 
-    def __init__(self, bankroll):
+    def __init__(self, bankroll, name):
         # Initiate a player
         self.bankroll = bankroll
         self.handval = {}
         self.statue = True
         self.cards = []
+        self.name = name
 
     def give_card(self, card):
         # give initial cards
