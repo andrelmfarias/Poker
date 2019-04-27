@@ -5,8 +5,7 @@ from collections import Counter
 
 from Utils import *
 
-head_converter = {'1': 1,
-                  '2': 2,
+head_converter = {'2': 2,
                   '3': 3,
                   '4': 4,
                   '5': 5,
@@ -27,12 +26,12 @@ def check_straight(simili_cards):
         cards.append(1)
     straight = []
     cards_set = set(cards)
-    for c in cards_set:
-        if c <= 10:
-            t_set = set(range(c, c+5))
+    for card in cards_set:
+        if card <= 10:
+            t_set = set(range(card, c+5))
             inter = t_set.intersection(cards_set)
             if len(inter) == 5:
-                straight.append(c)
+                straight.append(card)
     if straight:
         return straight[-1]
 
